@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test_book_model" file="/Users/xuzhang/Documents/BookSearchAPI/application/tests/Test_book_model.php" tests="2" assertions="11" failures="0" errors="0" time="0.005019">
+    <testcase name="test_get_list" class="Test_book_model" file="/Users/xuzhang/Documents/BookSearchAPI/application/tests/Test_book_model.php" line="20" assertions="7" time="0.002984"/>
+    <testcase name="test_get_book_details" class="Test_book_model" file="/Users/xuzhang/Documents/BookSearchAPI/application/tests/Test_book_model.php" line="40" assertions="4" time="0.002035"/>
+  </testsuite>
+</testsuites>
