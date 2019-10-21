@@ -26,9 +26,13 @@ class Book_model extends CI_Model
 	 */
 	public function get_list(string $search = NULL, int $page = 1, int $page_size = 5): array
 	{
-		return $this->db->select('id, title, author')
-			->like('title', $search)
-			->limit($page_size, ($page - 1) * $page_size)
+		$this->db->select('id, title, author');
+
+		if ($search) {
+			$this->db->like('title', $search);
+		}
+
+		return $this->db->limit($page_size, ($page - 1) * $page_size)
 			->get($this->table_name)
 			->result();
 	}
@@ -37,7 +41,7 @@ class Book_model extends CI_Model
 	 * @param int $id
 	 * @return stdClass
 	 */
-	public function get_book_details(int $id) :stdClass
+	public function get_book_details(int $id): stdClass
 	{
 		return $this->db->where('id', $id)->get($this->table_name)->row();
 	}
