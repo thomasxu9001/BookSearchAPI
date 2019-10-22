@@ -19,7 +19,7 @@ class Test_rest_api extends TestCase
 		$this->assertEquals(200, $response->getStatusCode());
 
 		$data = json_decode($response->getBody(), true);
-		$this->assertEquals(5, count($data));
+		$this->assertEquals(10, count($data));
 		$this->assertEquals(1, $data[0]['id']);
 		$this->assertEquals(5, $data[4]['id']);
 
