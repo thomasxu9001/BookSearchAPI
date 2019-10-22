@@ -21,7 +21,7 @@ final class Test_book_model extends TestCase
 	{
 		// Get default search result
 		$result = $this->ci->Book_model->get_list();
-		$this->assertEquals(10, count($result));
+		$this->assertEquals(20, count($result));
 		$this->assertEquals('A Technique for Producing Ideas', $result[4]->title);
 
 		// Now let's do some key word search

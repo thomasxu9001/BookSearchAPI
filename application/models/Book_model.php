@@ -24,7 +24,7 @@ class Book_model extends CI_Model
 	 * @param int $page_size
 	 * @return array
 	 */
-	public function get_list(string $search = NULL, int $page = 1, int $page_size = 10): array
+	public function get_list(string $search = NULL, int $page = 1, int $page_size = 20): array
 	{
 		$this->db->select('id, title, author');
 

@@ -63,6 +63,76 @@ class Migration_Add_book_data extends CI_Migration
 				'author' => 'Anne Lamott',
 				'description' => 'The Book in Three Sentences: To become a better writer, you have to write more. Writing reveals the story because you have to write to figure out what you’re writing about. Don’t judge your initial work too harshly because every writer has terrible first drafts.'
 			),
+			array(
+				'title' => 'Born Standing Up',
+				'author' => 'Steve Martin',
+				'description' => 'The Book in Three Sentences: Steve Martin was one of the most successful comedians of his generation. In his words, his career involved “10 years spent learning, 4 years spent refining, and 4 years spent in wild success.” This fantastic book provided beautiful insights not only into the details of his comedy act, but also into his early life and career development.'
+			),
+			array(
+				'title' => 'The Compound Effect',
+				'author' => 'Darren Hardy',
+				'description' => 'The Book in Three Sentences: The compound effect is the strategy of reaping huge rewards from small, seemingly insignificant actions. You cannot improve something until you measure it. Always take 100 percent responsibility for everything that happens to you.'
+			),
+			array(
+				'title' => 'Confessions of an Economic Hitman',
+				'author' => 'John Perkins',
+				'description' => 'The Book in Three Sentences: The United States is engaging in a modern form of slavery by using the World Bank and other international organizations to offer huge loans to developing nations for construction projects and oil production. On the surface this appears to be generous, but the money is only awarded to a country if it agrees to hire US construction firms, which ensures a select few people get rich. Furthermore, the loans are intentionally too big for any developing nation to repay and this debt burden virtually guarantees the developing nation will support the political interests of the United States.'
+			),
+			array(
+				'title' => 'Confessions of the Pricing Man',
+				'author' => 'Hermann Simon',
+				'description' => 'The Book in Three Sentences: Ultimately, profit is the only valid metric for guiding a company, and there are only three ways to influence profit: price, volume, and cost. Of these three factors, prices get the least attention, but have the greatest impact. The price a customer is willing to pay, and therefore the price a company can achieve, is always a reflection of the perceived value of the product or service in the customer’s eyes.'
+			),
+			array(
+				'title' => 'Fooled by Randomness',
+				'author' => 'Nassim Nicholas Taleb',
+				'description' => 'The Book in Three Sentences: Randomness, chance, and luck influence our lives and our work more than we realize. Because of hindsight bias and survivorship bias, in particular, we tend to forget the many who fail, remember the few who succeed, and then create reasons and patterns for their success even though it was largely random. Mild success can be explainable by skills and hard work, but wild success is usually attributable to variance and luck.'
+			),
+			array(
+				'title' => 'Free Will',
+				'author' => 'Sam Harris',
+				'description' => 'The Book in Three Sentences: We do not have the freedom and free will that we think we do. Yes, you can make conscious choices, but everything that makes up those conscious choices (your thoughts, your wants, your desires) is determined by prior causes outside your control. Just because you can do what you want does not mean you have free will because you are not choosing what you want in the first place.'
+			),
+			array(
+				'title' => 'The Goal',
+				'author' => 'Eliyahu Goldratt',
+				'description' => 'The Book in Three Sentences: Doing work and making money are not the same thing. Simplify your problem to the point where you understand the true goal of your organization. With your goal in mind, identify the constraints within your system (i.e. bottlenecks) and focus on improving the output of that constraint without worrying about the productivity of all related processes.'
+			),
+			array(
+				'title' => 'Guns, Germs, and Steel',
+				'author' => 'Jared Diamond',
+				'description' => 'The Book in Three Sentences: Some environments provide more starting materials and more favorable conditions for utilizing inventions and building societies than other environments. This is particularly notable in the rise of European peoples, which occurred because of environmental differences and not because of biological differences in the people themselves. There are four primary reasons Europeans rose to power and conquered the natives of North and South America, and not the other way around: 1) the continental differences in the plants and animals available for domestication, which led to more food and larger populations in Europe and Asia, 2) the rate of diffusion of agriculture, technology and innovation due to the geographic orientation of Europe and Asia (east-west) compared to the Americas (north-south), 3) the ease of intercontinental diffusion between Europe, Asia, and Africa, and 4) the differences in continental size, which led to differences in total population size and technology diffusion.'
+			),
+			array(
+				'title' => 'Ignore Everybody',
+				'author' => 'Hugh MacLeod',
+				'description' => 'The Book in Three Sentences: Nobody knows the best way to deliver your unique idea, no matter how smart they seem. Every artist has to find a way to make a living and share their work, preferably in a way that doesn’t ruin both. Finding your own voice and sharing that voice with the world is the most important thing.'
+			),
+			array(
+				'title' => 'Impro: Improvisation and the Theatre',
+				'author' => 'Keith Johnstone',
+				'description' => 'The Book in Three Sentences: Many of our behaviors are driven by our desire to achieve a particular level of status relative to those around us. People are continually raising and lowering their status in conversation through body language and words. Say yes to more and stop blocking the opportunities that come your way.'
+			),
+			array(
+				'title' => 'Incognito',
+				'author' => 'David Eagleman',
+				'description' => 'The Book in Three Sentences: Conscious thought has a surprisingly small impact on your life and most of your behaviors are driven by the unconscious mind. There are competing beliefs within your unconscious mind that are all battling for the single output of your conscious behavior. The complex interactions between your genetics and your environment determine the trajectory of your life.'
+			),
+			array(
+				'title' => 'Intimations of Paradise',
+				'author' => 'Christopher Burkett',
+				'description' => 'The Book in Three Sentences: A book of 73 photos by master landscape photographer Christopher Burkett.'
+			),
+			array(
+				'title' => 'The Lessons of History',
+				'author' => 'Will and Ariel Durant',
+				'description' => 'The Book in Three Sentences: Over the course of history, human behavior has changed, but not human nature. No matter who is in power, the rewards gradually accrue to the most clever and talented individuals. Ideas are the strongest things of all in history because they can be passed down and change the behavior of future generations—even a gun was originally an idea.'
+			),
+			array(
+				'title' => 'Love Yourself Like Your Life Depends On It',
+				'author' => 'Kamal Ravikant',
+				'description' => 'The Book in Three Sentences: Everyone has a truth that they need to live and share. For the author, that truth was committing to the daily practice of repeating the phrase “I love myself.” When you love yourself, life loves you back.'
+			),
 		);
 
 		$this->db->insert_batch('book', $data);
