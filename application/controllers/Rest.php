@@ -35,11 +35,7 @@ class Rest extends CI_Controller
 
 		$books = $this->Book_model->get_list($search);
 
-		if ($books) {
-			$this->response($books, 200);
-		} else {
-			$this->response(NULL, 404);
-		}
+		$this->response($books, 200);
 	}
 
 
