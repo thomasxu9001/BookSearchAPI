@@ -19,9 +19,10 @@ class Test_rest_api extends TestCase
 		$this->assertEquals(200, $response->getStatusCode());
 
 		$data = json_decode($response->getBody(), true);
-		$this->assertEquals(20, count($data));
-		$this->assertEquals(1, $data[0]['id']);
-		$this->assertEquals(5, $data[4]['id']);
+		$this->assertEquals(20, count($data['items']));
+		$this->assertEquals(1, $data['items'][0]['id']);
+		$this->assertEquals(5, $data['items'][4]['id']);
+		$this->assertEquals(2, $data['total_page']);
 
 		// Now do some keyword search
 		$response = $this->client->get('/Rest/books', [
@@ -33,9 +34,10 @@ class Test_rest_api extends TestCase
 
 		$data = json_decode($response->getBody(), true);
 
-		$this->assertEquals(2, count($data));
-		$this->assertEquals('The Art of Possibility', $data[0]['title']);
-		$this->assertEquals('The Art of War', $data[1]['title']);
+		$this->assertEquals(2, count($data['items']));
+		$this->assertEquals('The Art of Possibility', $data['items'][0]['title']);
+		$this->assertEquals('The Art of War', $data['items'][1]['title']);
+		$this->assertEquals(1, $data['total_page']);
 	}
 
 	public function test_get_book()

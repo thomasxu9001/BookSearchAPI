@@ -26,15 +26,28 @@ class Book_model extends CI_Model
 	 */
 	public function get_list(string $search = NULL, int $page = 1, int $page_size = 20): array
 	{
-		$this->db->select('id, title, author');
+		$items = [];
 
 		if ($search) {
 			$this->db->like('title', $search);
 		}
+		// Clone current db object, so we can get the total number first
+		$count_query = clone $this->db;
 
-		return $this->db->limit($page_size, ($page - 1) * $page_size)
-			->get($this->table_name)
-			->result();
+		$total_number = $count_query->count_all_results($this->table_name);
+		// If there is no matched records, then we don't need to do search
+		if ($total_number) {
+			$items = $this->db->select('id, title, author')
+				->limit($page_size, ($page - 1) * $page_size)
+				->get($this->table_name)
+				->result();
+		}
+
+		return [
+			'total_page' => ceil($total_number / $page_size),
+			'page' => $page,
+			'items' => $items
+		];
 	}
 
 	/**

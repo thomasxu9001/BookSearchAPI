@@ -21,19 +21,22 @@ final class Test_book_model extends TestCase
 	{
 		// Get default search result
 		$result = $this->ci->Book_model->get_list();
-		$this->assertEquals(20, count($result));
-		$this->assertEquals('A Technique for Producing Ideas', $result[4]->title);
+		$this->assertEquals(20, count($result['items']));
+		$this->assertEquals('A Technique for Producing Ideas', $result['items'][4]->title);
+		$this->assertEquals(2, $result['total_page']);
 
 		// Now let's do some key word search
 		$key_result = $this->ci->Book_model->get_list('Technique');
-		$this->assertEquals(1, count($key_result));
-		$this->assertEquals('A Technique for Producing Ideas', $key_result[0]->title);
+		$this->assertEquals(1, count($key_result['items']));
+		$this->assertEquals('A Technique for Producing Ideas', $key_result['items'][0]->title);
+		$this->assertEquals(1, $key_result['total_page']);
 
 		// Use another key word to do a search
 		$new_key_result = $this->ci->Book_model->get_list('art');
-		$this->assertEquals(2, count($new_key_result));
-		$this->assertEquals('The Art of Possibility', $new_key_result[0]->title);
-		$this->assertEquals('The Art of War', $new_key_result[1]->title);
+		$this->assertEquals(2, count($new_key_result['items']));
+		$this->assertEquals('The Art of Possibility', $new_key_result['items'][0]->title);
+		$this->assertEquals('The Art of War', $new_key_result['items'][1]->title);
+		$this->assertEquals(1, $new_key_result['total_page']);
 
 	}
 	
