@@ -32,8 +32,9 @@ class Rest extends CI_Controller
 	function books_get()
 	{
 		$search = $this->get('search');
+		$page = $this->get('page') ? $this->get('page') : 1;
 
-		$books = $this->Book_model->get_list($search);
+		$books = $this->Book_model->get_list($search, $page);
 
 		$this->response($books, 200);
 	}
